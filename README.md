@@ -28,4 +28,4 @@ The website can be visited here: https://austin-marlatt.github.io/refactoringsto
 ## License
 
 This Repository utilizes the standard MIT license.
-for more information, please refer to the "LICENSE" file.
+For more information, please refer to the "LICENSE" file.
