@@ -1,3 +1,5 @@
+/*rearanged style.css to follow the semantic structure of index.html*/
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -8,49 +10,43 @@ body {
     background-color: #d9dcd6;
 }
 
-/*consolidated many css rules involving the header into fewer rules*/
+/*changed from class to element selector, moved rules to matching section*/
 header {
-    width: 100%;
-    height: 100px;
-    background-color: #2a607c;
-    display:inline-block;
-}
-
-h1 {
-    display: inline-block;
-    font-size:70px;
+    padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:#ffffff;
+    color: #ffffff;
+    background-color: #2a607c;
 }
+    header h1 {
+        display: inline-block;
+        font-size:48px;
+    }
+        header h1 #seo {    /*switch 'seo' from class to id*/
+            color:#d9dcd6;
+        }
 
-/*got rid of redundant css rule*/
-
-nav, nav ul, nav a {
-    display:block;
-    padding-top: 3px;
-    margin-right: 10px;
-    float: right;           
+/*changed from class to element selector, moved rules to matching section*/
+header nav {
+    padding-top: 15px;
+    margin-right: 20px;
+    float: right;
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif; /*added qoutes around calibri*/
     font-size: 20px;
-    color: #ffffff;
-    text-decoration:none;
-    list-style-type:none; 
 }
+    header nav ul {
+        list-style-type: none;
+    }
+        header nav ul li {
+            display: inline-block;
+            margin-left: 25px;
+        }
+            header nav ul li a {    /*added 'a' to header element chain*/
+                color: #ffffff;
+                text-decoration: none;
 
-.header ul {
-    list-style-type: none;
-}
+            }
 
-.header ul li {
-    display: inline-block;
-    margin-left: 25px;
-}
-
-p {
-    font-size: 16px;
-}
-
-#digital-marketing-meeting {
+#digital-marketing-meeting { /*changed from class to id and added relevant name*/
     height: 800px;
     width: 100%;
     margin-bottom: 25px;
@@ -59,152 +55,95 @@ p {
     background-position: center;
 }
 
-.float-left {
-    float: left;
-    margin-right: 25px;
-}
-
-.float-right {
-    float: right;
-    margin-left: 25px;
-}
-
-/*.content {            added this rule to the individual sections
+#main-content {     /*changed to id for single use case*/
     width: 75%;
     display: inline-block;
     margin-left: 20px;
-}*/
+}
+    #search-engine-optimization {      /*switched to id selectors, moved rules next to matching section*/
+        margin-bottom: 20px;
+        padding: 50px;
+        height: 300px;
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+        background-color: #0072bb;
+        color: #ffffff;
+    }
+        #search-engine-optimization img {   /*consolidated float class into a decleration*/
+            max-height: 200px;
+            float: left;
+            margin-right: 25px;
+        }
+            #search-engine-optimization h2 {
+                margin-bottom: 20px;
+                font-size: 36px;
+            }
+        
+    #online-reputation-management {      /*switched to id selectors, moved rules next to matching section*/
+        margin-bottom: 20px;
+        padding: 50px;
+        height: 300px;
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+        background-color: #0072bb;
+        color: #ffffff;
+    }
+        #online-reputation-management img {     /*consolidated float class into a decleration*/
+            max-height: 200px;
+            float: right;
+            margin-left: 25px;
+        }
+            #online-reputation-management h2 {
+                margin-bottom: 20px;
+                font-size: 36px;
+            }
+        
+    #social-media-marketing {      /*switched to id selectors, moved rules next to matching section*/
+        margin-bottom: 20px;
+        padding: 50px;
+        height: 300px;
+        font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', 'sans-serif';
+        background-color: #0072bb;
+        color: #ffffff;
+    }
+        #social-media-marketing img {       /*consolidated float class into a decleration*/
+            max-height: 200px;
+            float: left;
+            margin-right: 25px;
+        }
+            #social-media-marketing h2 {
+                margin-bottom: 20px;
+                font-size: 36px;
+            }
 
-.benefits {
+#benefits {      /*switched to id selector instead of class selector, moved rules under matching section, consolidated redundant rules*/
     margin-right: 20px;
     padding: 20px;
     clear: both;
     float: right;
     width: 20%;
     height: 100%;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;    /*added qoutes around calibri*/
     background-color: #2589bd;
 }
+    .benefit-cards {    /*switched to id selectors instead of class selector*/
+        margin-bottom: 32px;
+        color: #ffffff;
+    }
+        .benefit-headers {
+            margin-bottom: 10px;
+            text-align: center;
+        }
+            .benefit-images {     
+                display: block;
+                margin: 10px auto;
+                max-width: 150px;
+            }
 
-.benefit-lead {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-#search-engine-optimization {
-    width: 75%;
-    display: inline-block;
-    Margin-left: 20px; 
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif; /*added qoutes around calibri*/
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-#online-reputation-management {
-    width: 75%;
-    display: inline-block;
-    Margin-left: 20px; 
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif; /*added qoutes around calibri*/
-    background-color: #0072bb;
-    color: #ffffff;
-
-}
-
-#social-media-marketing {
-    width: 75%;
-    display: inline-block;
-    Margin-left: 20px; 
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif; /*added qoutes around calibri*/
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-#search-engine-optimization img {
-    max-height: 200px;
-}
-
-#online-reputation-management img {
-    max-height: 200px;
-}
-
-#social-media-marketing img {
-    max-height: 200px;
-}
-
-#search-engine-optimization h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-#online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-#social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-footer {
+footer {    /*changed from class to element selectors, moved rules under matching section*/
     padding: 30px;
     clear: both;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', 'Arial', 'sans-serif'; /*added qoutes around font types*/
     text-align: center;
 }
-
-.footer h2 {
-    font-size: 20px;
-}
+    footer h2 {
+        font-size: 20px;
+    }
